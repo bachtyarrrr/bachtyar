@@ -42,7 +42,7 @@ nav{
 }
 
 .nav-logo{
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .nav-links{
@@ -92,6 +92,17 @@ nav{
     text-decoration: none;
 }
 
+.btn-cv {
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-cv:hover {
+    background-color: transparent;
+    color: #1d4ed8;    
+}
+
 .container{
     max-width: 1200px;
     margin: auto;
@@ -102,6 +113,19 @@ nav{
     position: absolute;
     box-shadow: 0 0 1000px 50px #1d4ed8;
     z-index: -100;
+}
+.blur-right{
+    position: absolute;
+    right: 0;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+.img-styles {
+    position: absolute;
+    right: 0;
+    z-index: -100;
+    width: 50%;
 }
 
 header{
@@ -116,19 +140,27 @@ header{
 header .content h4{
     margin-bottom: 1rem;
     color: #ccc;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 header .content h1{
     color: #fff;
-    margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    line-height: 4rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
 }
 
 header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #607ADB;
+}
+
+header .content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #607ADB;
 }
@@ -167,6 +199,45 @@ section .header{
     text-align: center;
     font-size: 2.25rem;
     font-weight: 600;
+}
+
+.about{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.about img {
+    width: 50%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.about p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+.skills {
+    padding: 2rem 5rem 1rem 8rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.skills .card .content{
+    flex: 1;
+}
+.skills .card{
+    /* background-color: #27272a; */
+    width: 70%;
+    padding: 10px 0px 10px 0px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .features{
@@ -228,15 +299,15 @@ section .header{
     color: #ccc;
 }
 
-.pricing{
+.experience{
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-.pricing .card{
-    padding: 3rem 2rem;
+.experience .card{
+    padding: 3rem 2rem 1rem 2rem;
     background-color: #27272a;
     display: flex;
     flex-direction: column;
@@ -245,52 +316,103 @@ section .header{
     transition: all 0.3s ease;
 }
 
-.pricing .card:hover{
+.experience .card:hover{
     background-color: #323232;
     border-color: #fff;
 }
 
-.pricing .card .content{
+.experience .card .content{
     flex: 1;
     margin-bottom: 2rem;
 }
 
-.pricing .card h4{
-    margin-bottom: 1rem;
-    color: #fff;
+.experience .card h3{
+    /* margin-bottom: 1rem; */
+    color: var(--main-color);
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.pricing .card h3{
+.experience .card h3 span {
+    color: #fff;
+}
+
+.experience .card h4{
     color: #fff;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 600;
     border-bottom: 2px dashed #fff;
 }
 
-.pricing .card p{
+.experience .card p{
     color: #fff;
     margin-bottom: 0.75rem;
 }
 
-.pricing .card p i{
+.experience .card p i{
     color: #ccc;
     font-size: 1.2rem;
     margin-right: 0.3rem;
 }
 
-.pricing .card button{
+.experience .card button{
     color: #fff;
     background-color: transparent;
     border: 2px solid #fff;
 }
 
-.pricing .card button:hover{
+.experience .card button:hover{
     background-color: #1e40af;
     border-color: #1e40af;
+}
+
+.project{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project .card{
+    padding: 3rem 2rem 1rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.project .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.project .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+.project .card .content img{
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project .card h3{
+    /* margin-bottom: 1rem; */
+    color: var(--main-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.experience .card h3 span {
+    color: #fff;
 }
 
 footer{
@@ -359,21 +481,79 @@ footer .column > a:hover{
 }
 
 @media (width < 900px){
+    .nav-logo {
+        max-width: 100px;
+    }
     .nav-links{
         display: none;
     }
     header{
         grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    header .content h1{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    header ul li{
+        display: inline-block;
     }
     header .image{
         grid-area: 1/1/2/2;
-        /* display: none; */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:50%;
     }
+    header .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about img {
+        margin-left: 25%;
+    }
+    .about p {
+        color: #ccc;
+        margin-bottom: 1rem;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills .card{
+        display: block;
+        /* left: 50%;
+        right: 50%; */
+        width:100%;
+    }
+
     .features{
         grid-template-columns: repeat(2, 1fr);
     }
-    .pricing{
+    .experience{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .experience .card h3{
+        /* margin-bottom: 1rem; */
+        color: var(--main-color);
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .experience .card h4{
+        color: #ccc;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-bottom: 2px dashed #fff;
+    }
+    .project{
+        grid-template-columns: repeat(1, 1fr);
     }
     footer{
         grid-template-columns: 1fr 200px;
@@ -389,7 +569,7 @@ footer .column > a:hover{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .pricing{
+    .experience{
         grid-template-columns: repeat(1, 1fr);
     }
 
