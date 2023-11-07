@@ -214,27 +214,33 @@
         <div class="project">
             <div class="card">
                 <div class="content">
-                    <img src="images/1.png" alt="Sistem Pakar">
+                    <img src="images/1.png" alt="Sistem Pakar" class="gallery-image">
                     <h3>Sistem Pakar</h3>
                     <p>Sistem Pakar Diagnosa Penyakit Metode Forward Chaining</p>
                 </div>
             </div>
             <div class="card">
                 <div class="content">
-                    <img src="images/2.png" alt="Sistem Antrian Pasien">
+                    <img src="images/2.png" alt="Sistem Antrian Pasien" class="gallery-image">
                     <h3>Sistem Antrian</h3>
                     <p>Sistem Antrian Pasien Rumah Sakit</p>
                 </div>
             </div>
             <div class="card">
                 <div class="content">
-                    <img src="images/3.png" alt="Sistem Antrian">
+                    <img src="images/3.png" alt="Sistem Antrian" class="gallery-image">
                     <h3>Sistem Antrian</h3>
                     <p>Sistem Antrian Pasien Dengan Nomor Rekam Medis dan QR</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
 
     <footer class="container">
         <span class="blur"></span>
@@ -278,8 +284,30 @@
     <div class="copyright">
         Copyright © 2023 Bachtyar. All Rights Reserved.
     </div>
+    <script>
+        var modal = document.getElementById("myModal");
 
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementsByClassName("gallery-image");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
 
+        for (var i = 0; i < img.length; i++) {
+            img[i].onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
