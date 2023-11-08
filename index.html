@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio Website | Nurmansyah Putra Bachtyar</title>
 </head>
@@ -33,7 +34,7 @@
             <span class="blur"></span>
             <span class="blur"></span>
             <!-- <h4>Hi, I'm Nurmansyah Putra Bachtyar</h4> -->
-            <h1>Hello there, I'm Tyar <br> I'm a <span>Web Developer</span></h1>
+            <h1 data-aos="fade-left">Hello there, I'm Tyar <br> I'm a <span>Web Developer</span></h1>
             <p>
                 I come from the city of Surabaya. I am a young man who is curious about the world of technology.
                 I'm always looking for new challenges to tackle.
@@ -47,16 +48,17 @@
                 </a>
             </div>
         </div>
-        <div class="image">
+        <div class="image" data-aos="zoom-in">
             <img src="images/header.png">
         </div>
     </header>
 
     <section class="container">
-        <h2 class="header">ABOUT ME</h2>
+        <h2 class="header" data-aos="zoom-in">ABOUT ME</h2>
         <div class="about">
-            <img src="images/about.png" alt="about image">
-            <p>Saya lulusan S1 Teknik Informatika Universitas 17 Agustus 1945 Surabaya, yang memiliki kemampuan dalam
+            <img src="images/about.png" alt="about image" data-aos="zoom-in-up">
+            <p data-aos="zoom-in-up">Saya lulusan S1 Teknik Informatika Universitas 17 Agustus 1945 Surabaya, yang
+                memiliki kemampuan dalam
                 bidang web developer dan graphic designer. Mampu menggunakan Laravel, Javascript, MySQL, Figma, Canva,
                 dan
                 Photoshop. Tertarik pada bidang Web Developer dan UI Designer. <br><br>Dalam
@@ -72,32 +74,32 @@
     </section>
 
     <div class="skills">
-        <div class="card">
+        <div class="card" data-aos="zoom-in-up">
             <div class="content">
                 <img src="images/html-logo.png" alt="">
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in-up">
             <div class="content">
                 <img src="images/css-logo.png" alt="">
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in-up">
             <div class="content">
                 <img src="images/js-logo.png" alt="">
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in-up">
             <div class="content">
                 <img src="images/laravel-logo.png" alt="">
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in-up">
             <div class="content">
                 <img src="images/mysql-logo.png" alt="">
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in-up">
             <div class="content">
                 <img src="images/figma-logo.png" alt="">
             </div>
@@ -106,9 +108,9 @@
 
 
     <section class="container">
-        <h2 class="header">EXPERIENCE</h2>
+        <h2 class="header" data-aos="zoom-in">EXPERIENCE</h2>
         <div class="experience">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <h3>Web Developer Intern<span> - PT Disty Teknologi</span></h3>
                     <h4>Feb 2022 - Jul 2022</h4>
@@ -127,7 +129,7 @@
                     </p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <h3>Web Developer Intern<span> - Aksamedia</span></h3>
                     <h4>Jan 2018 - Jun 2018</h4>
@@ -148,9 +150,9 @@
     <section class="container">
         <span class="blur-right"></span>
         <span class="blur-right"></span>
-        <h2 class="header">EDUCATION</h2>
+        <h2 class="header" data-aos="zoom-in">EDUCATION</h2>
         <div class="experience">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <h3>Universitas 17 Agustus 1945 Surabaya</h3>
                     <h4>2019 - 2023 <span>Graduation</span></h4>
@@ -170,7 +172,7 @@
                     </p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <h3>SMK Negeri 2 Surabaya</h3>
                     <h4>2016 - 2019</h4>
@@ -188,21 +190,34 @@
     </section>
 
     <section class="container">
-        <h2 class="header">MY SERVICES</h2>
+        <h2 class="header" data-aos="zoom-in">MY SERVICES</h2>
         <div class="features">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <span><i class="ri-code-s-slash-line"></i></span>
                 <h4>Web Development</h4>
                 <p>
                     Modern website will help you reach all of your marketing.
                 </p>
-                <!-- <a href="#">Join Now <i class="ri-arrow-right-line"></i></a> -->
             </div>
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <span><i class="ri-bug-line"></i></span>
                 <h4>Fix Your Bugs</h4>
                 <p>
                     You have any problem in your codes? Tell me, i will help you fix it.
+                </p>
+            </div>
+            <div class="card" data-aos="zoom-in-up">
+                <span><i class="ri-pencil-ruler-2-line"></i></span>
+                <h4>UI Designer</h4>
+                <p>
+                    Design visual elements and create an attractive user interface.
+                </p>
+            </div>
+            <div class="card" data-aos="zoom-in-up">
+                <span><i class="ri-computer-line"></i></span>
+                <h4>Basic Computer Skill</h4>
+                <p>
+                    If you need basic computer skill like installing windows, setting up network etc.
                 </p>
             </div>
         </div>
@@ -210,23 +225,23 @@
 
     <section class="container">
         <img src="images/style.png" class="img-styles">
-        <h2 class="header">RECENT PROJECT</h2>
+        <h2 class="header" data-aos="zoom-in">RECENT PROJECT</h2>
         <div class="project">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <img src="images/1.png" alt="Sistem Pakar" class="gallery-image">
                     <h3>Sistem Pakar</h3>
                     <p>Sistem Pakar Diagnosa Penyakit Metode Forward Chaining</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <img src="images/2.png" alt="Sistem Antrian Pasien" class="gallery-image">
                     <h3>Sistem Antrian</h3>
                     <p>Sistem Antrian Pasien Rumah Sakit</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <img src="images/3.png" alt="Sistem Antrian" class="gallery-image">
                     <h3>Sistem Antrian</h3>
@@ -309,6 +324,10 @@
         }
     </script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
