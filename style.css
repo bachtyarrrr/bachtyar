@@ -560,8 +560,12 @@ footer .column > a:hover{
 }
 
 @media (width < 900px){
+    nav {
+        display: none;
+    }
     .nav-logo {
-        max-width: 100px;
+        /* max-width: 100px; */
+        display: none;
     }
     .nav-links{
         display: none;
