@@ -588,6 +588,18 @@ footer .column > a:hover{
     color: var(--button-color);
 }
 
+footer i {
+    color: var(--font-color);
+}
+
+footer i:hover{
+    color: var(--font-btn-color);
+}
+
+footer .column p {
+    font-weight: 600;
+}
+
 .copyright{
     max-width: 1200px;
     margin: auto;
@@ -595,6 +607,7 @@ footer .column > a:hover{
     color: var(--font-color);
     font-size: 0.8rem;
     text-align: center;
+    font-weight: 600;
 }
 
 #myImg:hover {opacity: 0.7;}
