@@ -11,3 +11,4 @@ if (visitCount) {
 }
 // counterContainer.innerHTML = `Total Pengunjung = ${visitCount}`;
 counterContainer.innerHTML = visitCount;
+console.log("Jumlah pengunjung = ", visitCount)
