@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    <!-- <div class="bar"></div> -->
     <nav>
         <div class="nav-logo">
             <a href="/">
@@ -26,8 +25,8 @@
             <li id="link3" class="link"><a href="#">Education</a></li>
             <li id="link4" class="link"><a href="#">My Service</a></li>
             <li id="link5" class="link"><a href="#">Project</a></li>
-
         </ul>
+        <!-- <button class="ri-moon-fill" onclick="darkMode()" id="mode"></button> -->
     </nav>
 
     <header class="container">
@@ -45,11 +44,11 @@
                         class="btn"><i class="ri-mail-line"></i> Email Me</button>
                 </a>
                 <a href="files/cv.pdf" download="CV Nurmansyah Bachtyar">
-                    <button class="btn btn-cv"><i class="ri-download-fill"></i> Download CV</button>
+                    <button class="btn-cv"><i class="ri-download-fill"></i> Download CV</button>
                 </a>
             </div>
         </div>
-        <div class="image" data-aos="zoom-in">
+        <div class="image" data-aos="zoom-in" onclick="darkMode()">
             <img src="images/header.png">
         </div>
     </header>
@@ -329,6 +328,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="darkmode.js"></script>
 </body>
 
 </html>

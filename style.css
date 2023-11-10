@@ -3,12 +3,36 @@
 :root {
     --main-color : #607ADB;
     --seccond-color : #A3B1EE;
-    --bg-color : #26292B;
+    --bg-color : #1c2025;
+    --card-color : #27282f;
+    --button-color : #1d4ed8;
+    --shadow-color : var(--card-color);
+
+    --font-color : #fff;
+    --h1-color : #fff;
+    --font-btn-color : #fff;
     
     --main-font : 'Poppins', sans-serif;
 
     --animate-duration: 800ms;
     --animate-delay: 0.9s;
+    --box-shadow : none;
+}
+
+.dark {
+    --main-color : #607ADB;
+    --seccond-color : #A3B1EE;
+    --bg-color : #f2f2f2;
+    --card-color : #f2f2f2;
+    --button-color : #1d4ed8;
+    --h1-color : #1d4ed8;
+    /* --font-btn-color : #1d4ed8; */
+    --box-shadow : 1px 1px 5px var(--shadow-color);
+    --font-color : #1c2025;
+}
+
+body, html{
+    margin: 0px;
 }
 
 .animate__lightSpeedInRight {
@@ -55,7 +79,8 @@ a{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #18181B;
+    background-color: var(--bg-color);
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -78,12 +103,13 @@ nav{
     display: flex;
     align-items: center;
     gap: 3rem;
+    font-weight: 600;
 }
 
 .link a{
     position: relative;
     padding-bottom: 0.75rem;
-    color: #fff;
+    color: var(--font-color);
 }
 
 .link a::after{
@@ -105,8 +131,8 @@ nav{
     padding: 1rem 2rem;
     font-size: 1rem;
     font-family:var(--main-font);
-    color: #fff;
-    background-color: #1d4ed8;
+    color: var(--font-btn-color);
+    background-color: var(--button-color);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -121,15 +147,33 @@ nav{
 }
 
 .btn-cv {
-    background-color: transparent;
+    padding: 1rem 2rem;
     font-size: 1rem;
+    font-weight: 600;
+    font-family:var(--main-font);
+    color: var(--h1-color);
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
-.btn-cv:hover {
+.btn-cv:hover{
     background-color: transparent;
-    color: #1d4ed8;    
+    color: var(--main-color); 
 }
+
+/* #mode {
+    width: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--font-color);
+}
+#mode:hover {
+    background-color: transparent;
+    color: var(--main-color);
+} */
 
 .container{
     max-width: 1200px;
@@ -139,13 +183,13 @@ nav{
 
 .blur{
     position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
+    box-shadow: 0 0 1000px 50px var(--button-color);
     z-index: -100;
 }
 .blur-right{
     position: absolute;
     right: 0;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
+    box-shadow: 0 0 1000px 50px var(--button-color);
     z-index: -100;
 }
 
@@ -165,15 +209,15 @@ header{
     gap: 2rem;
 }
 
-header .content h4{
+/* header .content h4{
     margin-bottom: 1rem;
-    color: #ccc;
+    color: var(--font-color);
     font-size: 2rem;
-    font-weight: 600;
-}
+    font-weight: 1000;
+} */
 
 header .content h1{
-    color: #fff;
+    color: var(--h1-color);
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 3rem;
@@ -182,20 +226,21 @@ header .content h1{
 
 header .content h1 span{
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #607ADB;
+    -webkit-text-stroke: 2px var(--button-color);
 }
 
-header .content h2 {
+/* header .content h2 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #607ADB;
-}
+    -webkit-text-stroke: 1px var(--main-color);
+} */
 
 header .content p{
     margin-bottom: 2rem;
-    color: #ccc;
+    color: var(--font-color);
+    font-weight: 600;
 }
 
 header .image{
@@ -222,6 +267,7 @@ header .image img{
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  cursor: pointer;
 }
 
 header .image img:hover{
@@ -232,7 +278,7 @@ header .image img:hover{
 
 section .header{
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--h1-color);
     text-align: center;
     font-size: 2.25rem;
     font-weight: 600;
@@ -260,8 +306,9 @@ section .header{
 }
 
 .about p {
-    color: #ccc;
+    color: var(--font-color);
     margin-bottom: 1rem;
+    font-weight: 500;
 }
 .skills {
     padding: 2rem 5rem 1rem 8rem;
@@ -293,55 +340,60 @@ section .header{
 }
 
 .features .card{
-    background-color: #27272a;
+    background-color: var(--card-color);
     padding: 20px 50px 10px 50px;
     border: 2px solid transparent;
     border-radius: 15px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     text-align: center;
+    box-shadow: var(--box-shadow);
 }
 
 .features .card:hover{
-    background-color: #323232;
-    border-color: #fff;
+    background-color: var(--card-color);
+    border-color: var(--main-color);
 }
 
 .features .card span{
     display: inline-block;
-    background-color: #1e40af;
+    background-color: var(--button-color);
     padding: 2px 9px;
     margin-bottom: 1rem;
     font-size: 1.75rem;
-    color: #fff;
+    color: var(--font-color);
     border-radius: 5px;
 }
 
 .features .card h4{
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: var(--font-color);
     font-size: 1.2rem;
     font-weight: 600;
 }
 
 .features .card p{
-    color: #ccc;
+    color: var(--font-color);
     margin-bottom: 1rem;
 }
 
 .features .card a{
-    color: #fff;
+    color: var(--font-color);
     transition: all 0.3s ease;
 }
 
-.features .card a:hover{
-    color: #1e40af;
+.features i {
+    color: var(--font-btn-color);
 }
+
+/* .features .card a:hover{
+    color: ;
+} */
 
 .sub-header{
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: #ccc;
+    color: var(--font-color);
 }
 
 .experience{
@@ -353,17 +405,18 @@ section .header{
 
 .experience .card{
     padding: 3rem 2rem 1rem 2rem;
-    background-color: #27272a;
+    background-color: var(--card-color);
     display: flex;
     flex-direction: column;
     border: 2px solid transparent;
     border-radius: 15px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    box-shadow: var(--box-shadow);
 }
 
 .experience .card:hover{
-    background-color: #323232;
-    border-color: #fff;
+    background-color: var(--card-color);
+    border-color: var(--main-color);
 }
 
 .experience .card .content{
@@ -379,39 +432,39 @@ section .header{
 }
 
 .experience .card h3 span {
-    color: #fff;
+    color: var(--font-color);
 }
 
 .experience .card h4{
-    color: #fff;
+    color: var(--font-color);
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     font-size: 1rem;
     font-weight: 600;
-    border-bottom: 2px dashed #fff;
+    border-bottom: 2px dashed var(--font-color);
 }
 
 .experience .card p{
-    color: #fff;
+    color: var(--font-color);
     margin-bottom: 0.75rem;
 }
 
 .experience .card p i{
-    color: #ccc;
+    color: var(--font-color);
     font-size: 1.2rem;
     margin-right: 0.3rem;
 }
 
-.experience .card button{
-    color: #fff;
+/* .experience .card button{
+    color: var(--font-color);
     background-color: transparent;
-    border: 2px solid #fff;
-}
+    border: 2px solid var(--font-color);
+} */
 
-.experience .card button:hover{
+/* .experience .card button:hover{
     background-color: #1e40af;
     border-color: #1e40af;
-}
+} */
 
 .project{
     margin-top: 4rem;
@@ -422,18 +475,19 @@ section .header{
 
 .project .card{
     padding: 3rem 2rem 1rem 2rem;
-    background-color: #27272a;
+    background-color: var(--card-color);
     display: flex;
     flex-direction: column;
     border: 2px solid transparent;
     border-radius: 15px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
+    box-shadow: var(--box-shadow);
 }
 
 .project .card:hover{
-    background-color: #323232;
-    border-color: #fff;
+    background-color: var(--card-color);
+    border-color: var(--main-color);
 }
 
 .project .card .content{
@@ -443,6 +497,8 @@ section .header{
 .project .card .content img{
     border-radius: 10px;
     margin-bottom: 1rem;
+    border: 1px solid var(--seccond-color);
+    box-shadow: var(--box-shadow);
 }
 
 .project .card h3{
@@ -453,12 +509,12 @@ section .header{
 }
 
 .project .card p{
-    color: #fff;
+    color: var(--font-color);
     margin-bottom: 0.75rem;
 }
 
 .experience .card h3 span {
-    color: #fff;
+    color: var(--font-color);
 }
 
 footer{
@@ -469,12 +525,12 @@ footer{
 }
 
 footer .column .logo{
-    max-width: 100px;
+    max-width: 50%;
     margin-bottom: 2rem;
 }
 
 footer .column p{
-    color: #ccc;
+    color: var(--font-color);
     margin-bottom: 2rem;
 }
 
@@ -484,23 +540,37 @@ footer .column .socials{
     gap: 1rem;
 }
 
-footer .column .socials a{
-    color: #ccc;
-    border: 1px solid #ccc;
+nav button {
+    color: var(--font-btn-color);
+    border: 1px solid var(--font-color);
     padding: 5px 10px;
     font-size: 1.25rem;
     border-radius: 100%;
     transition: all 0.3s ease;
+    background-color: var(--button-color);
+}
+
+nav button:hover{
+    /* color: var(--font-color); */
+    background-color: var(--button-color);
+}
+
+footer .column .socials a{
+    color: var(--font-color);
+    border: 1px solid var(--font-color);
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 footer .column .socials a:hover{
-    color: #fff;
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
+    color: var(--font-color);
+    background-color: var(--button-color);
 }
 
 footer .column h4{
-    color: #fff;
+    color: var(--font-color);
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -508,20 +578,20 @@ footer .column h4{
 
 footer .column > a{
     display: block;
-    color: #ccc;
+    color: var(--font-color);
     margin-bottom: 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 footer .column > a:hover{
-    color: #1d4ed8;
+    color: var(--button-color);
 }
 
 .copyright{
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
-    color: #fff;
+    color: var(--font-color);
     font-size: 0.8rem;
     text-align: center;
 }
@@ -558,7 +628,7 @@ footer .column > a:hover{
     width: 80%;
     max-width: 700px;
     text-align: center;
-    color: #ccc;
+    color: #fff;
     padding: 10px 0;
     height: 150px;
   }
@@ -585,7 +655,7 @@ footer .column > a:hover{
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -593,20 +663,13 @@ footer .column > a:hover{
 
   .close:hover,
 .close:focus {
-  color: #bbb;
+  color: var(--font-color);
   text-decoration: none;
   cursor: pointer;
 }
 
 @media (width < 900px){
     nav {
-        display: none;
-    }
-    .nav-logo {
-        /* max-width: 100px; */
-        display: none;
-    }
-    .nav-links{
         display: none;
     }
     header{
@@ -642,7 +705,7 @@ footer .column > a:hover{
         align-items: center;
     }
     .about p {
-        color: #ccc;
+        /* color: var(--font-color); */
         margin-bottom: 1rem;
         text-align: center;
     }
@@ -671,12 +734,12 @@ footer .column > a:hover{
         font-weight: 500;
     }
     .experience .card h4{
-        color: #ccc;
+        color: var(--font-color);
         padding-bottom: 1rem;
         margin-bottom: 2rem;
         font-size: 0.9rem;
         font-weight: 600;
-        border-bottom: 2px dashed #fff;
+        border-bottom: 2px dashed var(--font-color);
     }
     .project{
         grid-template-columns: repeat(1, 1fr);
@@ -684,9 +747,9 @@ footer .column > a:hover{
     footer{
         grid-template-columns: 1fr 200px;
     }
-    /* footer img {
-
-    } */
+    footer img {
+        width: 150px;
+    }
     .modal-content {
         width: 100%;
       }
