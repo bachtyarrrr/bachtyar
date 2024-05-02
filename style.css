@@ -31,47 +31,20 @@
     --font-color : #1c2025;
 }
 
-body, html{
-    margin: 0px;
-}
-
-.animate__lightSpeedInRight {
-    --animate-duration: 2s;
-  }
-
-*{
+*, html, body{
     padding: 0;
     margin: 0;
     outline: none;
     border: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* transition: all .3s ease-in-out; */
 }
 
 img{
     width: 100%;
     display: flex;
 }
-
-/* .bar {
-    width: 100%;
-    height: 5px;
-    background-color: var(--main-color);
-    top: 0;
-    left: 0;
-    animation: progress;
-    position: fixed;
-    animation-timeline: scroll();
-    transform-origin: 0%;
-}
-
-@keyframes progress {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(1);
-    }
-} */
 
 a{
     text-decoration: none;
@@ -85,18 +58,32 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
-nav{
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
+section nav {
     display: flex;
+}
+
+nav {
+    /* width: 70rem; */
+    width: 100%;
+    margin: auto;
+    padding: 1rem 7rem;
+    transition: all 0.2s linear;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    position: fixed;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+nav.scrolled {
+    background-color: var(--bg-color);
+    opacity: 90%;
+    box-shadow: 0px 0px 3px 0px #313131;
 }
 
 .nav-logo{
-    max-width: 150px;
+    max-width: 8rem;
 }
 
 .nav-links{
@@ -111,6 +98,7 @@ nav{
     position: relative;
     padding-bottom: 0.75rem;
     color: var(--font-color);
+    display: block;
 }
 
 .link a::after{
@@ -121,11 +109,24 @@ nav{
     bottom: 0;
     left: 0;
     background-color: #1d4ed8;
-    transition: all 0.3s ease;
+    transition: all .3s ease-in-out;
 }
 
 .link a:hover::after{
     width: 70%;
+}
+
+li i {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--font-color);
+    display: block;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+li i:hover {
+    color: #1d4ed8;
 }
 
 .btn{
@@ -142,6 +143,7 @@ nav{
 .btn:hover{
     background-color: var(--main-color);
 }
+
 
 .btn a{
     text-decoration: none;
@@ -165,6 +167,15 @@ nav{
     color: var(--main-color); 
 }
 
+/* .dark {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-weight: 600;
+} */
+
 /* #mode {
     width: 30px;
     cursor: pointer;
@@ -179,7 +190,7 @@ nav{
 .container{
     max-width: 1200px;
     margin: auto;
-    padding: 5rem 2rem;
+    padding: 5rem 4rem;
 }
 
 .blur{
@@ -204,30 +215,54 @@ nav{
 header{
     position: relative;
     padding-top: 2rem;
+    top: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
 }
 
-/* header .content h4{
-    margin-bottom: 1rem;
-    color: var(--font-color);
-    font-size: 2rem;
-    font-weight: 1000;
-} */
-
 header .content h1{
     color: var(--h1-color);
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    /* font-weight: 800px; */
     line-height: 3rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
-header .content h1 span{
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px var(--button-color);
+header .content .text{
+    /* -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--button-color); */
+    position: relative;
+    color: var(--button-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+header .content .text.first-text {
+    color: var(--font-color);
+}
+
+header .content .text.sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--button-color);
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+    40%,
+    60%{
+        left: calc(100% + 4px);
+    }
+    100% {
+        left: 0%;
+    }
 }
 
 /* header .content h2 {
@@ -239,9 +274,9 @@ header .content h1 span{
 } */
 
 header .content p{
+    font-size: 1rem;
     margin-bottom: 2rem;
     color: var(--font-color);
-    font-weight: 600;
 }
 
 header .image{
@@ -268,7 +303,6 @@ header .image img{
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-  cursor: pointer;
 }
 
 header .image img:hover{
@@ -292,6 +326,10 @@ section .header{
     gap: 2rem;
 }
 
+.text-info1 {
+    color: var(--button-color);
+}
+
 .about img {
     width: 70%;
     margin-left: 10%;
@@ -311,8 +349,60 @@ section .header{
     margin-bottom: 1rem;
     font-weight: 500;
 }
-.skills {
-    padding: 2rem 5rem 1rem 8rem;
+
+.about .content{
+    flex: 1;
+    margin-bottom: 2rem;
+    height: 280px;
+    width: auto;
+    overflow: auto;
+    scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-width: thin;
+}
+
+.about .content::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  .about .content::-webkit-scrollbar-track {
+    background-color: var(--seccond-color);
+    border-radius: 100px;
+  }
+  
+  .about .content::-webkit-scrollbar-thumb {
+    background-color: var(--button-color);
+    border-radius: 100px;
+  }
+
+.about h3{
+    /* margin-bottom: 1rem; */
+    color: var(--main-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.about h3 span {
+    color: var(--font-color);
+}
+.about p{
+    color: var(--font-color);
+    margin-bottom: 0.75rem;
+}
+.about p i{
+    color: var(--font-color);
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+.about h4{
+    color: var(--font-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 2px dashed var(--font-color);
+}
+/* .skills {
+    padding: 2rem 1rem 1rem 8rem;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
@@ -324,14 +414,14 @@ section .header{
     flex: 1;
 }
 .skills .card{
-    /* background-color: #27272a; */
-    width: 70%;
+    background-color: #27272a;
+    width: 50%;
     padding: 10px 0px 10px 0px;
     border: 2px solid transparent;
     border-radius: 15px;
     transition: all 0.3s ease;
     text-align: center;
-}
+} */
 
 .features{
     margin-top: 4rem;
@@ -397,7 +487,9 @@ section .header{
     color: var(--font-color);
 }
 
-.experience{
+
+
+/* .experience{
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -423,10 +515,16 @@ section .header{
 .experience .card .content{
     flex: 1;
     margin-bottom: 2rem;
-}
+} */
 
-.experience .card h3{
-    /* margin-bottom: 1rem; */
+/* .about .content .text {
+    flex: 1;
+    overflow: auto;
+    margin-bottom: 2rem;
+} */
+
+/* .experience .card h3{
+    margin-bottom: 1rem;
     color: var(--main-color);
     font-size: 1.2rem;
     font-weight: 500;
@@ -454,17 +552,6 @@ section .header{
     color: var(--font-color);
     font-size: 1.2rem;
     margin-right: 0.3rem;
-}
-
-/* .experience .card button{
-    color: var(--font-color);
-    background-color: transparent;
-    border: 2px solid var(--font-color);
-} */
-
-/* .experience .card button:hover{
-    background-color: #1e40af;
-    border-color: #1e40af;
 } */
 
 .project{
@@ -682,10 +769,12 @@ footer .column p {
   cursor: pointer;
 }
 
-@media (width < 900px){
-    nav {
+@media screen and (width < 900px){
+
+    section nav{
         display: none;
     }
+
     header{
         grid-template-columns: repeat(1, 1fr);
         text-align: center;
@@ -693,6 +782,14 @@ footer .column p {
     header .content h1{
         font-size: 2rem;
         line-height: 3rem;
+    }
+    header .content .text{
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 3rem;
+    }
+    .blur {
+        display: none;
     }
     header ul li{
         display: inline-block;
@@ -721,7 +818,7 @@ footer .column p {
     .about p {
         /* color: var(--font-color); */
         margin-bottom: 1rem;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .skills {
@@ -732,7 +829,7 @@ footer .column p {
         display: block;
         /* left: 50%;
         right: 50%; */
-        width:100%;
+        width:5rem;
     }
 
     .features{
@@ -770,6 +867,9 @@ footer .column p {
 }
 
 @media (width < 600px){
+    /* .nav-link {
+        display: none;
+    } */
     header .image::before{
         display: none;
     }

@@ -15,20 +15,38 @@ const link4 = document.getElementById("link4");
 const link5 = document.getElementById("link5");
 
 link1.addEventListener('click', () => {
-    scrollToElement('.header');
+    scrollToElement('container');
 });
 
 link2.addEventListener('click', () => {
     // Scroll to the second element with "header" class
-    scrollToElement('.header', 1);
+    scrollToElement('.container', 1);
 });
 
 link3.addEventListener('click', () => {
-    scrollToElement('.header', 2);
+    scrollToElement('.container', 2);
 });
 link4.addEventListener('click', () => {
-    scrollToElement('.header', 3);
+    scrollToElement('.container', 3);
 });
 link5.addEventListener('click', () => {
-    scrollToElement('.header', 4);
+    scrollToElement('.container', 4);
 });
+
+const headerElement = document.querySelector("header");
+// const linkElement = document.getElementsByClassName("nav-link");
+
+const headerObserver = new IntersectionObserver(
+    (entries) => {
+        const [entry] = entries;
+
+        if(!entry.isIntersecting){
+            document.querySelector("nav").classList.add("scrolled")
+            // document.getElementsByClassName("nav-link")
+        } else {
+            document.querySelector("nav").classList.remove("scrolled")
+        }
+}, {threshold: 0.98})
+
+headerObserver.observe(headerElement)
+

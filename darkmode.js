@@ -12,5 +12,5 @@ function darkMode(){
         document.getElementById("img").src="images/logo.png";
         document.getElementById("img-footer").src="images/logo.png";
     }
-    // mode.classList.toggle("ri-sun-fill");
+    mode.classList.toggle("ri-sun-fill");
 }

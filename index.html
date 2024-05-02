@@ -8,188 +8,131 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio Website | Nurmansyah Putra Bachtyar</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <nav>
-        <div class="nav-logo">
-            <a href="/">
-                <img src="images/logo.png" id="img">
-            </a>
-        </div>
+    <section>
+        <nav>
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="images/logo.png" id="img">
+                </a>
+            </div>
 
-        <ul class="nav-links">
-            <!-- <li class="link"><a href="#">Home</a></li> -->
-            <li id="link1" class="link"><a href="#">About Me</a></li>
-            <li id="link2" class="link"><a href="#">Experience</a></li>
-            <li id="link3" class="link"><a href="#">Education</a></li>
-            <li id="link4" class="link"><a href="#">My Service</a></li>
-            <li id="link5" class="link"><a href="#">Project</a></li>
-        </ul>
-        <!-- <button class="ri-moon-fill" onclick="darkMode()" id="mode"></button> -->
-    </nav>
+            <ul class="nav-links">
+                <!-- <li class="link"><a href="#">Home</a></li> -->
+                <li class="link"><a href="#aboutme">About Me</a></li>
+                <li class="link"><a href="#services">My Service</a></li>
+                <li class="link"><a href="#project">Project</a></li>
+                <li><i class="link ri-moon-fill" onclick="darkMode()" id="mode"></i></li>
+            </ul>
+        </nav>
+    </section>
+
 
     <header class="container">
         <div class="content">
             <span class="blur"></span>
             <span class="blur"></span>
-            <!-- <h4>Hi, I'm Nurmansyah Putra Bachtyar</h4> -->
-            <h1 data-aos="fade-left">Hello there, I'm Tyar <br> I'm a <span>Web Developer</span></h1>
-            <p>
-                I come from the city of Surabaya. I am a young man who is curious about the world of technology.
-                I'm always looking for new challenges to tackle.
-            </p>
+            <h4>Hello World,</h4>
+            <h1 data-aos="fade-left">I'm Nurmansyah Bachtyar <br /><span class="text-info1"></span></h1>
             <div class="row">
-                <a href="mailto:nurmansyahbachtyar@gmail.com" target="_blank" style="text-decoration: none;"><button
-                        class="btn"><i class="ri-mail-line"></i> Email Me</button>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nurmansyahbachtyar@gmail.com" target="_blank" style="text-decoration: none;">
+                    <button class="btn animate__animated animate__bounceIn animate__repeat-infinite"><i
+                            class="ri-mail-line"></i> Hire
+                        Me</button>
                 </a>
-                <a href="files/cv.pdf" download="CV Nurmansyah Bachtyar">
+                <a href="files/cv.pdf" download="CV Nurmansyah Bachtyar" target="_blank">
                     <button class="btn-cv"><i class="ri-download-fill"></i> Download CV</button>
                 </a>
             </div>
         </div>
-        <div class="image" data-aos="zoom-in" onclick="darkMode()">
+        <div class="image animate__animated animate__jackInTheBox" style="cursor: pointer;" onclick="darkMode()" id="mode">
             <img src="images/header.png">
         </div>
     </header>
 
-    <section class="container">
+    <section class="container" id="aboutme">
         <h2 class="header" data-aos="zoom-in">ABOUT ME</h2>
-        <div class="about">
-            <img src="images/about.png" alt="about image" data-aos="zoom-in-up">
-            <p data-aos="zoom-in-up">Saya lulusan S1 Teknik Informatika Universitas 17 Agustus 1945 Surabaya, yang
+        <div class="about" data-aos="zoom-in-up">
+            <!-- <img src="images/about.png" alt="about image" data-aos="zoom-in-up"> -->
+            <p>Saya lulusan S1 Teknik Informatika Universitas 17 Agustus 1945 Surabaya, yang
                 memiliki kemampuan dalam
                 bidang web developer dan graphic designer. Mampu menggunakan Laravel, Javascript, MySQL, Figma, Canva,
                 dan
-                Photoshop. Tertarik pada bidang Web Developer dan UI Designer. <br><br>Dalam
+                Photoshop. Tertarik pada bidang Web Developer dan UI Designer. <br><br>
+                Saat ini saya sedang bekerja di Bunbee ID sebagai Admin Production sejak bulan maret 2024 hingga sekarang.
+                Saya juga open for freelance, terutama Data entry dan Web Developer.  
+                <!-- Dalam
                 perjalanan
                 karir
                 saya, saya sangat berharap dapat berkontribusi pada pengembangan teknologi dan
                 proyek-proyek inovatif yang dapat saya lakukan mempunyai dampak positif. Saya siap menjadi bagian dari
                 tim
-                yang dinamis dan berorientasi pada hasil di dunia IT.</p>
-        </div>
-        <span class="blur"></span>
-        <span class="blur"></span>
+                yang dinamis dan berorientasi pada hasil di dunia IT. -->
+            </p>
+            <div class="content">
+                <h2>Experience</h2>
+                <h3>Admin Production <span> - Bunbee ID</span></h3>
+                <h4>Maret 2024 - Saat ini</h4>
+
+                <h3>Web Developer Intern <span> - PT Disty Teknologi</span></h3>
+                <h4>Feb 2022 - Jul 2022</h4>
+
+                <h3>Web Developer Intern<span> - Aksamedia</span></h3>
+                <h4>Jan 2018 - Jun 2018</h4>
+
+                <h2>Education</h2>
+                <h3>Universitas 17 Agustus 1945 Surabaya</h3>
+                <h3><span>Teknik Informatika - IPK 3.69</span></h3>
+                <h4>2019 - 2023 Lulus</h4>
+
+                <h3>SMK Negeri 2 Surabaya</h3>
+                <h3><span>Rekayasa Perangkat Lunak</span></h3>
+                <h4>2016 - 2019</h4>
+            </div>
+            <span class="blur"></span>
+            <span class="blur"></span>
     </section>
 
-    <div class="skills">
-        <div class="card" data-aos="zoom-in-up">
-            <div class="content">
-                <img src="images/html-logo.png" alt="">
-            </div>
-        </div>
-        <div class="card" data-aos="zoom-in-up">
-            <div class="content">
-                <img src="images/css-logo.png" alt="">
-            </div>
-        </div>
-        <div class="card" data-aos="zoom-in-up">
-            <div class="content">
-                <img src="images/js-logo.png" alt="">
-            </div>
-        </div>
-        <div class="card" data-aos="zoom-in-up">
-            <div class="content">
-                <img src="images/laravel-logo.png" alt="">
-            </div>
-        </div>
-        <div class="card" data-aos="zoom-in-up">
-            <div class="content">
-                <img src="images/mysql-logo.png" alt="">
-            </div>
-        </div>
-        <div class="card" data-aos="zoom-in-up">
-            <div class="content">
-                <img src="images/figma-logo.png" alt="">
-            </div>
-        </div>
-    </div>
-
-
-    <section class="container">
-        <h2 class="header" data-aos="zoom-in">EXPERIENCE</h2>
-        <div class="experience">
+    <!-- <section class="container">
+        <div class="skills">
             <div class="card" data-aos="zoom-in-up">
                 <div class="content">
-                    <h3>Web Developer Intern<span> - PT Disty Teknologi</span></h3>
-                    <h4>Feb 2022 - Jul 2022</h4>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Develop an HTML and CSS-based Queuing System for queue data management.
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Developed a Web and Mobile-based hospital Queuing System with a team (4 people) for queue data
-                        management, and queue number calling.
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Design the appearance of the website using Figma.
-                    </p>
+                    <img src="images/html-logo.png" alt="">
                 </div>
             </div>
             <div class="card" data-aos="zoom-in-up">
                 <div class="content">
-                    <h3>Web Developer Intern<span> - Aksamedia</span></h3>
-                    <h4>Jan 2018 - Jun 2018</h4>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Developed baby fashion E-commerce system using PHP with codeigniter framework together with IT
-                        team to display products.
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Add features and resolve debugs or errors on the web.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <span class="blur-right"></span>
-        <span class="blur-right"></span>
-        <h2 class="header" data-aos="zoom-in">EDUCATION</h2>
-        <div class="experience">
-            <div class="card" data-aos="zoom-in-up">
-                <div class="content">
-                    <h3>Universitas 17 Agustus 1945 Surabaya</h3>
-                    <h4>2019 - 2023 <span>Graduation</span></h4>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Bachelor of Computer - Informatics Engineering - IPK 3.69
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Taking the Professional Certification Institute Test with Information Technology Audit
-                        competencies
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Thesis "Designing a Web-Based Expert System using the Forward Chaining Method in Diagnosing
-                        Early of Diabetes Mellitus Disease"
-                    </p>
+                    <img src="images/css-logo.png" alt="">
                 </div>
             </div>
             <div class="card" data-aos="zoom-in-up">
                 <div class="content">
-                    <h3>SMK Negeri 2 Surabaya</h3>
-                    <h4>2016 - 2019</h4>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Software Engineering
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Taking the Expertise Competency Test from PT Mitra Bisnis Informatika
-                    </p>
+                    <img src="images/js-logo.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-aos="zoom-in-up">
+                <div class="content">
+                    <img src="images/laravel-logo.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-aos="zoom-in-up">
+                <div class="content">
+                    <img src="images/mysql-logo.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-aos="zoom-in-up">
+                <div class="content">
+                    <img src="images/figma-logo.png" alt="">
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="container">
+    <section class="container" id="services">
         <h2 class="header" data-aos="zoom-in">MY SERVICES</h2>
         <div class="features">
             <div class="card" data-aos="zoom-in-up">
@@ -223,39 +166,39 @@
         </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="project">
         <img src="images/style.png" class="img-styles">
-        <h2 class="header" data-aos="zoom-in">RECENT PROJECT</h2>
+        <h2 class="header" data-aos="zoom-in">PROJECT</h2>
         <div class="project">
             <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <img src="images/1.png" alt="Sistem Pakar" class="gallery-image">
                     <h3>Sistem Pakar</h3>
-                    <p>Sistem Pakar Diagnosa Penyakit Metode Forward Chaining</p>
+                    <p>Sistem Pakar Diagnosa Penyakit Metode Forward Chaining dan C4.5. Laravel, Bootstrap dan Javascript</p>
                 </div>
             </div>
             <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <img src="images/2.png" alt="Sistem Antrian Pasien" class="gallery-image">
                     <h3>Sistem Antrian</h3>
-                    <p>Sistem Antrian Pasien Rumah Sakit</p>
+                    <p>Sistem Antrian Pasien Rumah Sakit. <br> Fitur : <br> - Cetak Antrian <br>- Pemanggilan Antrian <br>- Real Time Antrian</p>
                 </div>
             </div>
             <div class="card" data-aos="zoom-in-up">
                 <div class="content">
                     <img src="images/3.png" alt="Sistem Antrian" class="gallery-image">
                     <h3>Sistem Antrian</h3>
-                    <p>Sistem Antrian Pasien Dengan Nomor Rekam Medis dan QR</p>
+                    <p>Sistem Antrian Pasien Dengan Nomor Rekam Medis dan QR. PHP Native, Bootstrap dan Javascript</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="myModal" class="modal">
+    <!-- <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
         <div id="caption"></div>
-    </div>
+    </div> -->
 
     <footer class="container">
         <span class="blur"></span>
@@ -336,6 +279,61 @@
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('.text-info1', {
+            strings: ['WEB DEVELOPER', 'ENTRY DATA', 'UI DESIGN', 'GRAPHIC DESIGN'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+        })
+
+        var swiper = new Swiper(".karya-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".btn-prev3",
+                prevEl: ".btn-next3",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                280: {
+                    slidesPerView: 1,
+                    spaceBetween: 1,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 1,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+            },
+        });
+    </script>
+
+    <!-- <script>
+        const text = document.querySelector(".sec-text")
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Web Developer";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Frond-End";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "UI Designer";
+            }, 8000);
+        }
+        textLoad()
+        setInterval(textLoad, 12000)
+
+    </script> -->
     <script defer src="/_vercel/insights/script.js"></script>
     <!-- <script src="counter.js"></script> -->
 </body>
